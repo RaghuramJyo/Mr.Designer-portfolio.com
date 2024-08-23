@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.heading .logo {
+    color: aqua;
+}
+
+.heading .design {
+    color: white;
+}
+
+/* Services section */
+.services {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #1f242d;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    overflow-x: auto;
+    padding: 5rem;
+}
+
+.services-box {
+    position: relative;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly reduced opacity for the overlay */
+    border-radius: 2rem;
+    z-index: 1;
+}
+
+.services-box h3,
+.services-box p,
+.services-box .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.services-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #00bfa5;
+    border-color: #00bfa5;
+}
+
+.services-box h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: aqua;
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+/* Updated button styles */
+.services-box .btn {
+    display: inline-block;
+    padding: 0.5rem; /* Reduced padding for smaller button */
+    background: #00bfa5;
+    border-radius: 2.5rem; /* Reduced border-radius for smaller, tighter button */
+    box-shadow: 0 0 1rem #00bfa5;
+    font-size: 1.0rem; /* Reduced font size */
+    color: #ffffff;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    text-decoration: none;
+}
+
+.services-box .btn:hover {
+    box-shadow: none;
+}
+
+/* Back Arrow Styling */
+.back-arrow {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 2.5rem;
+    color: white;
+    z-index: 3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-arrow:hover {
+    color: aqua;
+}
+
+/* Responsive Adjustments */
+
+/* 768px Width */
+@media (max-width: 768px) {
+    .services {
+        padding: 80px 0;
+    }
+
+    .services-container {
+        flex-direction: column;
+        padding: 4rem;
+        gap: 2rem;
+    }
+
+    .services-box {
+        height: 280px;
+        padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    .services-box h3 {
+        font-size: 2.2rem;
+    }
+
+    .services-box p {
+        font-size: 1.4rem;
+    }
+
+    .services-box .btn {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+    .back-arrow {
+        font-size: 2.3rem;
+        top: 1.8rem;
+        left: 1.8rem;
+    }
+}
+
+/* 617px Width */
+@media (max-width: 617px) {
+    .services {
+        padding: 70px 0;
+    }
+
+    .services-container {
+        flex-direction: column;
+        padding: 3rem;
+        gap: 2rem;
+    }
+
+    .services-box {
+        height: 250px;
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .services-box h3 {
+        font-size: 2rem;
+    }
+
+    .services-box p {
+        font-size: 1.3rem;
+    }
+
+    .services-box .btn {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+    }
+
+    .back-arrow {
+        font-size: 2rem;
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+}
+
+/* 450px Width */
+@media (max-width: 450px) {
+    .services {
+        padding: 60px 0;
+    }
+
+    .services-container {
+        flex-direction: column;
+        padding: 2.5rem;
+        gap: 1.5rem;
+    }
+
+    .services-box {
+        height: 220px;
+        padding: 1.8rem 1rem 2.8rem;
+    }
+
+    .services-box h3 {
+        font-size: 1.8rem;
+    }
+
+    .services-box p {
+        font-size: 1.2rem;
+    }
+
+    .services-box .btn {
+        font-size: 0.8rem;
+        padding: 0.35rem;
+    }
+
+    .back-arrow {
+        font-size: 1.8rem;
+        top: 1.3rem;
+        left: 1.3rem;
+    }
+}
+
+/* 365px Width */
+@media (max-width: 365px) {
+    .services {
+        padding: 50px 0;
+    }
+
+    .services-container {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.2rem;
+    }
+
+    .services-box {
+        height: 200px;
+        padding: 1.5rem 0.8rem 2.5rem;
+    }
+
+    .services-box h3 {
+        font-size: 1.6rem;
+    }
+
+    .services-box p {
+        font-size: 1.1rem;
+    }
+
+    .services-box .btn {
+        font-size: 0.75rem;
+        padding: 0.3rem;
+    }
+
+    .back-arrow {
+        font-size: 1.6rem;
+        top: 1rem;
+        left: 1rem;
+    }
+}

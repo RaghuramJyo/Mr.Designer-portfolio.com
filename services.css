@@ -1,0 +1,244 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Services Section */
+.services {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 9%;
+    background-color: #1f242d;
+    background-image: url('https://res.cloudinary.com/dfzljy48z/image/upload/v1627849262/web-development-icon.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    color: white;
+    opacity: 0.9;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.services-content {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    text-align: center;
+}
+
+.services-content i.bx-code-alt,
+.services-content i.bxs-paint,
+.services-content i.bxs-camera,
+.services-content i.bxs-store,
+.services-content i.bx-palette {
+    font-size: 30rem;
+    color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.services-content h2 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Lucida Sans', sans-serif;
+    position: relative;
+    z-index: 2;
+}
+
+.services-content h2 .white {
+    color: white;
+}
+
+.services-content h2 .aqua {
+    color: aqua;
+}
+
+.services-content p {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    color: white;
+    font-family: 'Lucida Sans', sans-serif;
+    position: relative;
+    z-index: 2;
+    text-align: start;
+}
+
+/* Back Arrow Styling */
+.back-arrow {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 2.5rem;
+    color: white;
+    z-index: 3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-arrow:hover {
+    color: aqua;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .services {
+        padding: 4rem 5%;
+    }
+
+    .services-content {
+        max-width: 80%;
+        padding: 4rem;
+    }
+
+    .services-content i.bx-code-alt,
+    .services-content i.bxs-paint,
+    .services-content i.bx-palette {
+        font-size: 20rem; /* Reduced icon size */
+    }
+
+    .services-content h2 {
+        font-size: 3.5rem;
+    }
+
+    .services-content p {
+        font-size: 1.4rem;
+    }
+
+    .back-arrow {
+        font-size: 2.2rem;
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+}
+
+@media (max-width: 617px) {
+    .services {
+        padding: 3rem 4%;
+    }
+
+    .services-content {
+        max-width: 90%;
+        padding: 3rem;
+    }
+
+    .services-content i.bx-code-alt,
+    .services-content i.bxs-paint,
+    .services-content i.bx-palette {
+        font-size: 15rem; /* Further reduced icon size */
+    }
+
+    .services-content h2 {
+        font-size: 3rem;
+    }
+
+    .services-content p {
+        font-size: 1.3rem;
+    }
+
+    .back-arrow {
+        font-size: 2rem;
+        top: 1.2rem;
+        left: 1.2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .services {
+        padding: 2.5rem 3%;
+    }
+
+    .services-content {
+        max-width: 100%;
+        padding: 2.5rem;
+    }
+
+    .services-content i.bx-code-alt,
+    .services-content i.bxs-paint,
+    .services-content i.bx-palette {
+        font-size: 10rem; /* Adjust icon size for small screens */
+    }
+
+    .services-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .services-content p {
+        font-size: 1rem;
+    }
+
+    .back-arrow {
+        font-size: 1.8rem;
+        top: 1rem;
+        left: 1rem;
+    }
+}
+
+@media (max-width: 365px) {
+    .services {
+        padding: 2rem 2%;
+    }
+
+    .services-content {
+        max-width: 100%;
+        padding: 2rem;
+    }
+
+    .services-content i.bx-code-alt,
+    .services-content i.bxs-paint,
+    .services-content i.bx-palette {
+        font-size: 8rem; /* Further reduced icon size */
+    }
+
+    .services-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .services-content p {
+        font-size: 0.7rem;
+    }
+
+    .back-arrow {
+        font-size: 1.6rem;
+        top: 0.8rem;
+        left: 0.8rem;
+    }
+}
